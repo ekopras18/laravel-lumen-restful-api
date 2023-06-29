@@ -39,7 +39,7 @@ class AuthController extends Controller
             'password' => Hash::make($request->password)
         ]);
 
-        return $this->responeBasic(true, 'Successfully register', 200);
+        return $this->respone200('Successfully register');
     }
 
     public function login(Request $request)
@@ -55,11 +55,11 @@ class AuthController extends Controller
 
         $user = User::where('email', $request['email'])->first();
         if (!$user) {
-            return $this->responeBasic(false, 'We can`t find a user with that email address', 401);
+            return $this->respone401('We can`t find a user with that email address');
         }
 
         if (!Hash::check($request['password'], $user->password)) {
-            return $this->responeBasic(false, 'The password is incorrect', 401);
+            return $this->respone401('The password is incorrect');
         }
         $payload = [
             'iat' => intval(microtime(true)),
@@ -73,7 +73,7 @@ class AuthController extends Controller
             'token_type' => 'Bearer',
         ];
 
-        return $this->responeBasic(true, 'Successfully login', 200, $data);
+        return $this->respone200('Successfully login', $data);
     }
 
     public function reset_password(Request $request)
@@ -90,12 +90,12 @@ class AuthController extends Controller
 
         // Check Old Password Match User Auth
         if (!Hash::check($request->old_password, Auth::user()->password)) {
-            return $this->responeBasic(false, 'Old password do not match our records.', 401);
+            return $this->respone401('Old password do not match our records.');
         }
 
         // Check New Password Match Confirm Password
         if ($request->confirm_password != $request->new_password) {
-            return $this->responeBasic(false, 'Confirm Password Not Match', 401);
+            return $this->respone401('Confirm Password Not Match');
         }
 
         // Update Password
@@ -105,6 +105,6 @@ class AuthController extends Controller
 
         $this->model->find(Auth::user()->id)->update($data);
 
-        return $this->responeBasic(true, 'Your password has been reset!', 200);
+        return $this->respone200('Your password has been reset!');
     }
 }

@@ -26,7 +26,7 @@ class ProfileController extends Controller
 
     public function index()
     {
-        return $this->responeBasic(true, 'Success', 200, Auth::user());
+        return $this->respone200('Success', Auth::user());
     }
 
     public function update(Request $request, $id)
@@ -40,7 +40,7 @@ class ProfileController extends Controller
         // Check User ID
         $check = $this->model->find($id);
         if($check == ''){
-            return $this->responeBasic(false, 'We can`t find a user ', 404);
+            return $this->respone404('We can`t find a user ');
         }
 
         $data = [
@@ -51,7 +51,7 @@ class ProfileController extends Controller
 
         $this->model->find($id)->update($data);
 
-        return $this->responeBasic(true, 'Success Updated', 200, $data);
+        return $this->respone200('Success Updated', $data);
 
     }
 

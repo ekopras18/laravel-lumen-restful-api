@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use \App\Models\User;
 
@@ -15,9 +14,9 @@ class UsersSeeder extends Seeder
     {
         $user = [
             [
-                'name' => 'Eko Prasetio',
-                'username' => 'ekopras',
-                'email' => 'ekopras@ekopras.com',
+                'name' => 'Demo User',
+                'username' => 'demo',
+                'email' => 'demo@ekopras.engineer',
                 'password' => '$2y$10$uBatLnuZ37l7Vbu3DOH4Ku8i1kqwvcr0VfkUV96bFJpgpvbX80hp6',
             ]
         ];

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Portfolio;
 
 use App\Http\Controllers\Controller;
+use App\Models\Portfolio;
+use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
 {
@@ -13,19 +15,34 @@ class PortfolioController extends Controller
      */
     public function __construct()
     {
-        //
+        $this->model = new Portfolio;
+        $this->field = array(
+            'id as id',
+            'name as name',
+            'description as description',
+            'images as images',
+            'date as date',
+            'link as link',
+        );
+        $this->mandatory = array(
+            'name' => 'required',
+            'description' => 'required',
+            'images' => 'required',
+            'date' => 'required',
+        );
     }
 
-    public function index(){
-        return response()
-            ->json([
-                'status' => true,
-                'message' => 'Success',
-                'code' => 200,
-                'data' => [
-                    'name' => 'Portfolio',
-                    'description' => 'This is portfolio'
-                ]
-            ], 200);
-    }
+    // public function beforeStore(Request $request)
+    // {
+    //     $request->merge([
+    //         'testField' => $request->testValue,
+    //     ]);
+    // }
+
+    // public function beforeUpdate(Request $request, $id)
+    // {
+    //     $request->merge([
+    //         'testField' => $request->testValue,
+    //     ]);
+    // }
 }

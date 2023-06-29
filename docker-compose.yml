@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+  nginx:
+    container_name: '${CONTAINER_NAME}_nginx'
+    build:
+      context: .docker-lumen
+      dockerfile: web.dockerfile
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - '${APP_PORT:-80}:80'
+    networks:
+      - mre
+
+  app:
+    container_name: '${CONTAINER_NAME}_app'
+    build:
+      context: .docker-lumen
+      dockerfile: app.dockerfile
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - mre
+
+networks:
+  mre:
+    external: true

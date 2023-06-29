@@ -27,7 +27,7 @@ The goal is to accelerate the development of a RESTful API.
 - [x] [API Documentation (Postman)](https://documenter.getpostman.com/view/17746540/2s93zB41E7)
 - [ ] CI/CD
 - [ ] Unit Testing
-- [ ] Dockerisation
+- [x] Dockerisation
 
 ## Server Requirements
 
@@ -41,6 +41,10 @@ The goal is to accelerate the development of a RESTful API.
 - Clone this repository
 - Run `composer install` or `composer update`
 - Copy `.env.example` to `.env`
+
+## Setup Docker when using Docker
+
+- Run `docker-compose up -d`
 
 ## Usage
 

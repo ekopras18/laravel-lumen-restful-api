@@ -21,8 +21,8 @@ $router->get('/key', function() {
 $router->get('/', function () use ($router) {
     return response()
         ->json([
-            'name' => 'Restful API Basic',
-            'message' => 'This is basic restful api',
+            'name' => 'Restful API Advanced',
+            'message' => 'This is advanced restful api',
             'technology' => [
                 'framework' => $router->app->version(),
                 'Authantication' => 'Json Web Token (JWT)',

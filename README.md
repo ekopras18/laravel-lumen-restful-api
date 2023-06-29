@@ -13,7 +13,10 @@ Laravel Lumen is a stunningly fast PHP micro-framework for building web applicat
 - [x] JWT Auth
 - [x] Enabling CORS
 - [x] API Versioning (Custom)
-- [x] [API Documentation (Postman)](https://www.postman.com/collections/0e1b8b8b1b1b1b1b1b1b)
+- [x] [API Documentation (Postman)](https://documenter.getpostman.com/view/17746540/2s93zB41E7)
+- [ ] CI/CD
+- [ ] Unit Testing
+- [ ] Dockerisation
 
 ## Server Requirements
 
@@ -25,7 +28,7 @@ Laravel Lumen is a stunningly fast PHP micro-framework for building web applicat
 ## Installation
 
 1. Clone this repository
-2. Run `composer install`
+2. Run `composer install` or `composer update`
 3. Copy `.env.example` to `.env`
 
 ## Usage
@@ -35,14 +38,13 @@ Laravel Lumen is a stunningly fast PHP micro-framework for building web applicat
 
 ## API Documentation
 
-- [Postman](https://www.postman.com/collections/0e1b8b8b1b1b1b1b1b1b)
+- [Postman](https://documenter.getpostman.com/view/17746540/2s93zB41E7)
 
 ## License
 
 - The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 - To Colaborate with me, please contact me on 
-  - [LinkedIn](https://www.linkedin.com/in/ahmad-rosid-9b1b8b1b1/)
-  - [Instagram](https://www.instagram.com/ahmadrosid_/?hl=id)
-  - [Facebook](https://www.facebook.com/ahmad.rosid.3386)
+  - [LinkedIn](https://www.linkedin.com/in/ekopras18/)
+  - [Instagram](https://www.instagram.com/ekopras18/)
 
 

@@ -1,6 +1,10 @@
-<?php namespace App\Http\Middleware;
+<?php
+
+namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Http\Response;
+
 
 class CorsMiddleware
 {
@@ -21,16 +25,27 @@ class CorsMiddleware
             'Access-Control-Allow-Headers'     => 'Content-Type, Authorization, X-Requested-With'
         ];
 
-        if ($request->isMethod('OPTIONS'))
-        {
-            return response()->json('{"method":"OPTIONS"}', 200, $headers);
+        if ($request->isMethod('OPTIONS')) {
+            return response()->json(['method' => 'OPTIONS'], 200, $headers);
         }
 
         $response = $next($request);
-        foreach($headers as $key => $value)
-        {
+
+        foreach ($headers as $key => $value) {
             $response->header($key, $value);
         }
+
+        // Custom handling for 404 Not Found
+        if ($response instanceof Response && $response->getStatusCode() == 404) {
+            // Custom response for 404 Not Found
+            return response()->json([
+                'status' => true,
+                'message' => 'Url Not Found, Please Check Again',
+                'code' => 404,
+            ], 404, $headers);
+
+        }
+
 
         return $response;
     }

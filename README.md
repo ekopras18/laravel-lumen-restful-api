@@ -1,11 +1,22 @@
-# Lumen PHP Framework Version 10.0
+# Restful API Lumen Framework - Advance
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
 [![License](https://img.shields.io/packagist/l/laravel/lumen)](https://packagist.org/packages/laravel/lumen-framework)
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax.
+<b>Simple But Powerful.</b> This project is intended for developers who want to create a RESTful API using the Lumen Framework. This project is also intended for developers who want to learn how to create a RESTful API using the Lumen Framework.
 
 > **Note:** This for development and production environment. don't forget to star this repository.
+
+## Goals
+
+The goal is to accelerate the development of a RESTful API. 
+
+- [x] Simple
+- [x] Fast
+- [x] Secure
+- [x] Easy to use
+- [x] Easy to customize
+- [x] Easy to maintain
 
 ## Features
 

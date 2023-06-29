@@ -11,12 +11,12 @@
 
 The goal is to accelerate the development of a RESTful API. 
 
-- [x] Simple
-- [x] Fast
-- [x] Secure
-- [x] Easy to use
-- [x] Easy to customize
-- [x] Easy to maintain
+- Simple
+- Fast
+- Secure
+- Easy to use
+- Easy to customize
+- Easy to maintain
 
 ## Features
 
@@ -38,14 +38,14 @@ The goal is to accelerate the development of a RESTful API.
 
 ## Installation
 
-1. Clone this repository
-2. Run `composer install` or `composer update`
-3. Copy `.env.example` to `.env`
+- Clone this repository
+- Run `composer install` or `composer update`
+- Copy `.env.example` to `.env`
 
 ## Usage
 
-1. Run `php artisan migrate:fresh --seed`
-3. Run `php -S localhost:8000 -t public`
+- Run `php artisan migrate:fresh --seed`
+- Run `php -S localhost:8000 -t public`
 
 ## API Documentation
 

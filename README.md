@@ -26,7 +26,7 @@ The goal is to accelerate the development of a RESTful API.
 - [x] API Versioning (Custom)
 - [x] [API Documentation (Postman)](https://documenter.getpostman.com/view/17746540/2s93zB41E7)
 - [ ] CI/CD
-- [ ] Unit Testing
+- [x] Unit Testing (PHPUnit Basic)
 - [x] Dockerisation
 
 ## Server Requirements

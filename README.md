@@ -42,14 +42,13 @@ The goal is to accelerate the development of a RESTful API.
 - Run `composer install` or `composer update`
 - Copy `.env.example` to `.env`
 
-## Setup Docker when using Docker
-
-- Run `docker-compose up -d`
-
 ## Usage
 
 - Run `php artisan migrate:fresh --seed`
-- Run `php -S localhost:8000 -t public`
+- Setup Docker when using Docker
+  - Run `docker-compose up -d`
+- Setup Normal when not using Docker
+  - Run `php -S localhost:8000 -t public`
 
 ## API Documentation
 

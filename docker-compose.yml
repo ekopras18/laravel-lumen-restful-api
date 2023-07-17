@@ -3,7 +3,7 @@ services:
   nginx:
     container_name: '${CONTAINER_NAME}_nginx'
     build:
-      context: .docker-lumen
+      context: ./docker-lumen
       dockerfile: web.dockerfile
     volumes:
       - ./:/var/www/html
@@ -15,7 +15,7 @@ services:
   app:
     container_name: '${CONTAINER_NAME}_app'
     build:
-      context: .docker-lumen
+      context: ./docker-lumen
       dockerfile: app.dockerfile
     volumes:
       - ./:/var/www/html

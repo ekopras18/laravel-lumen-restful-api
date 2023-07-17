@@ -56,7 +56,7 @@ The goal is to accelerate the development of a RESTful API.
 
 ## License
 
-- The Lumen framework is open-sourced software licensed under the [MIT license]([https://opensource.org/licenses/MIT](https://github.com/ekopras18/restful-api-lumen/edit/master/LICENSE.md)).
+- The Lumen framework is open-sourced software licensed under the [MIT license](https://github.com/ekopras18/restful-api-lumen/edit/master/LICENSE.md).
 - To Colaborate with me, please contact me on 
   - [LinkedIn](https://www.linkedin.com/in/ekopras18/)
   - [Instagram](https://www.instagram.com/ekopras18/)

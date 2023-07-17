@@ -17,17 +17,12 @@ class PortfolioController extends Controller
     {
         $this->model = new Portfolio;
         $this->field = array(
-            'id as id',
-            'name as name',
-            'description as description',
-            'images as images',
-            'date as date',
-            'link as link',
+            '*'
         );
         $this->mandatory = array(
             'name' => 'required',
             'description' => 'required',
-            'images' => 'required',
+            'image' => 'required',
             'date' => 'required',
         );
     }

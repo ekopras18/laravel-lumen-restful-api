@@ -6,6 +6,10 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg
 # Install Postgre PDO
 RUN apt-get install -y libpq-dev \
     && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
-    && docker-php-ext-install pdo pdo_pgsql pgsql
+    && docker-php-ext-install pdo pdo_pgsql pgsql 
+    
+# Install MongoDB Driver
+RUN pecl install mongodb \
+    && docker-php-ext-enable mongodb
 
 WORKDIR /var/www/html
